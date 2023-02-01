@@ -194,6 +194,29 @@ class Kt2 {
 
         //懂了就是从选定字符向前缩进到最前面，但是选定字符必须是在首位，可以是多个字符一起。不穿值默认字符"|".
     }
+
+
+    //操作符
+    //位操作符
+    // 对于Int和Long类型，还有一系列的位操作符可以使用，分别是：
+    //shl(bits) – 左移位 (Java’s <<)
+    //shr(bits) – 右移位 (Java’s >>)
+    //ushr(bits) – 无符号右移位 (Java’s >>>)
+    //and(bits) – 与
+    //or(bits) – 或
+    //xor(bits) – 异或
+    //inv() – 反向
+    fun operatorTest(){
+        var a = 1
+        var b = 3
+
+        var aOb = 0b0001
+        var bOb = 0b0011
+
+        println(a == aOb) //结果是true 两者相等，只是一个是十进制，一个是二进制
+        println(a.shl(1) == aOb.shl(1))//结果是true 相等说明 这个操作符，就是把十进制转变成二进制然后做二进制的运算操作
+        println(a.shl(1) == 2) //结果是 true 就是二进制左移一位
+    }
 }
 
 fun main(args: Array<String>) {
@@ -211,5 +234,7 @@ fun main(args: Array<String>) {
 
 //    Kt2().testArray()
 
-    Kt2().testString()
+//    Kt2().testString()
+
+    Kt2().operatorTest()
 }
