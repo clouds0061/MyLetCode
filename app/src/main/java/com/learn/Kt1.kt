@@ -1,7 +1,11 @@
 package com.learn
 
-class Kt1 {
+class Kt1 public constructor(ins : String){
+    var input : String = ins
 
+    fun print(){
+        println(input)
+    }
 }
 
 //第一步 hello

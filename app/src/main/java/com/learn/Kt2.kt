@@ -168,6 +168,22 @@ class Kt2 {
 
         for (i in bArray) println(i)
         println(c(2))
+
+        aArray.get(1) == aArray[1]
+
+        var cArray = Array<Kt1>(4) { i -> Kt1("第${i}个Kt1") }
+        var dArray = Array<Kt1>(4){
+            i -> when{
+                i == 0 -> Kt1("第一个Kt1,有点特殊")
+                else -> Kt1("default")
+            }
+        }
+        cArray.forEach {
+            it.print()
+        }
+        dArray.forEach {
+            it.print()
+        }
     }
 
 
@@ -206,7 +222,7 @@ class Kt2 {
     //or(bits) – 或
     //xor(bits) – 异或
     //inv() – 反向
-    fun operatorTest(){
+    fun operatorTest() {
         var a = 1
         var b = 3
 
@@ -232,9 +248,9 @@ fun main(args: Array<String>) {
 
 //    Kt2().test()
 
-//    Kt2().testArray()
+    Kt2().testArray()
 
 //    Kt2().testString()
 
-    Kt2().operatorTest()
+//    Kt2().operatorTest()
 }
