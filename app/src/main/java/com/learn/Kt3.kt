@@ -189,6 +189,9 @@ class Kt3 constructor() {
     //如果主构造器没有任何注解，也没有任何可见度修饰符，那么constructor关键字可以省略,就是类名上面的可以省略
 }
 
+fun Extend.PrintInKt3(){
+    println("在Kt3中的扩展")
+}
 
 fun main(args: Array<String>) {
 //    Kt3().ifTest(6)
