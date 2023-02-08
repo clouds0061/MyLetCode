@@ -12,16 +12,18 @@
         android:theme="@style/Theme.MyLetCode"
         tools:targetApi="31">
         <activity
-            android:name="com.example.MainActivity"
+            android:name="com.example.SplashActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.MyLetCode.NoActionBar">
+            android:theme="@style/Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.MainActivity"/>
+        <activity android:name="com.example.MainActivity2"/>
     </application>
 
 </manifest>

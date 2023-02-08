@@ -11,7 +11,15 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Launcher" parent="Theme.MyLetCode.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:scaleType">fitXY</item>
+<!--        <item name="android:windowDisablePreview">true</item>-->
+        <item name="android:windowBackground">@drawable/splash_layer</item>
     </style>
 
     <style name="Theme.MyLetCode.NoActionBar">
@@ -21,5 +29,5 @@
 
     <style name="Theme.MyLetCode.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="Theme.MyLetCode.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.MyLetCode.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 </resources>
