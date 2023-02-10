@@ -5,7 +5,7 @@
     xmlns:custom = "http://schemas.android.com"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.FirstFragment">
+    tools:context="com.example.activity.FirstFragment">
 
 
     <com.android.view.SplashTextView
