@@ -5,13 +5,17 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.renderscript.RenderScript.Priority
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.work.*
+import androidx.work.impl.Processor
+import androidx.work.impl.utils.ProcessUtils
 import com.example.myletcode.databinding.ActivitySplashBinding
 import com.example.service.InitConfigService
+import com.example.service.ThreadPoolUtils
 import java.lang.ref.SoftReference
 import java.lang.ref.WeakReference
 import java.time.Duration
@@ -33,12 +37,37 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initService()
+        initThreadPool()
         binding = ActivitySplashBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
         Thread.sleep(2000)
 
 //        Application
+    }
+
+
+    /**
+     * 线程池
+     */
+    private fun initThreadPool() {
+        var thread = ThreadPoolUtils.instance
+        var thread2 = ThreadPoolUtils.getService2()
+
+        thread.getService().execute(Runnable {
+            kotlin.run {
+                Thread.currentThread().priority = 1//设置优先度
+                Thread.currentThread().name = "hello world"
+            }
+        })
+        thread2.execute(Runnable {
+            kotlin.run {
+                Thread.currentThread().priority = 5
+                Thread.currentThread().name = "hello kotlin"
+            }
+        })
+
+
     }
 
     /**

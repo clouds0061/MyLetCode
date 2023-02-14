@@ -37,6 +37,8 @@ android {
 
 dependencies {
 
+//    //1.添加依赖
+//    implementation'com.github.markzhai:blockcanary-android:1.5.0'
     //1.第一步添加依赖
     implementation "androidx.work:work-runtime:2.7.1"
 
