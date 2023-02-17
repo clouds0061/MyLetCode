@@ -45,6 +45,8 @@ class HandlerAndLooper {
 //        //这种非静态得匿名内部类可能造成内存泄露
         var handler2 =  Handler()
         var meg = Message.obtain()
+        var whens = meg.`when`
+        whens = -111111L
         meg.data.putString("name","zz")
 
         handler2.handleMessage(meg)
