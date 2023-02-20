@@ -3,12 +3,18 @@ package com.example.activity
 import android.os.Handler
 import android.os.Looper
 import android.os.Message
+import android.os.MessageQueue
 import java.util.Arrays
 import java.util.Objects
 
 class HandlerAndLooper {
 
     fun testHandler() {
+        Looper.prepare()
+        Looper.loop()
+        var message = Message.obtain()
+        message.recycle()
+
 //        var handler = Handler()
 //
 //
@@ -49,6 +55,7 @@ class HandlerAndLooper {
         whens = -111111L
         meg.data.putString("name","zz")
 
+//        MessageQueue()
         handler2.handleMessage(meg)
         handler2.sendMessage(meg)
 
