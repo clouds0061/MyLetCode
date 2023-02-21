@@ -36,13 +36,15 @@ class SplashActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        initService()
-        initThreadPool()
+//        initService()
+//        initThreadPool()
         binding = ActivitySplashBinding.inflate(layoutInflater)
-
+//
         setContentView(binding.root)
+        Log.d("SplashActivity" , "开始等待!")
         Thread.sleep(2000)
-
+        Log.d("SplashActivity" , "等待完成!")
+        jump2Main()
 //        Application
     }
 

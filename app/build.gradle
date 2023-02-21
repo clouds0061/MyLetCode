@@ -19,7 +19,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -32,6 +32,11 @@ android {
     }
     buildFeatures {
         viewBinding true
+    }
+
+    //禁止AAPT来优化图片 如果自己使用了图片优化，如果开启AAPT有可能已经优化过的图片会变大
+    aaptOptions{
+        cruncherEnabled = false
     }
 }
 
